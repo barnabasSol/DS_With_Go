@@ -37,3 +37,17 @@ func Init() *HashTable {
 	}
 	return ht
 }
+
+// ht := hashtable.Init()
+// list := []string{
+// 	"ERIC",
+// 	"KENNY",
+// 	"KYLE",
+// 	"STAN",
+// 	"RANDY",
+// 	"BUTTERS",
+// }
+// for _, name := range list {
+// 	ht.Insert(name)
+// }
+// println(ht.Search("BUTTERS"))
