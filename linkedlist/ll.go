@@ -36,7 +36,20 @@ func (l *linkedList) Append(n *Node) {
 	l.length++
 }
 
+func (dl linkedList) Find(value int) bool {
+	for dl.head != nil {
+		if dl.head.Data == value {
+			return true
+		}
+		dl.head = dl.head.next
+	}
+	return false
+}
+
 func (l *linkedList) Delete(Data int) {
+	if l.head == nil {
+		return
+	}
 	if l.head.Data == Data {
 		l.head = l.head.next
 		l.length--

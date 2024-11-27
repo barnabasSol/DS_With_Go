@@ -1,13 +1,19 @@
 package main
 
+import "github.com/barnabasSol/DS/hashtable"
+
 func main() {
-
+	ht := hashtable.Init()
+	list := []string{
+		"ERIC",
+		"KENNY",
+		"KYLE",
+		"STAN",
+		"RANDY",
+		"BUTTERS",
+	}
+	for _, name := range list {
+		ht.Insert(name)
+	}
+	println(ht.Search("BUTTERS"))
 }
-
-// func hash(key string) int {
-// 	var hash int
-// 	for _, v := range key {
-// 		hash += int(v)
-// 	}
-// 	return hash % 7
-// }

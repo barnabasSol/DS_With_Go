@@ -62,6 +62,16 @@ func (dl *dlinkedList) Append(node *Node) {
 	}
 }
 
+func (dl dlinkedList) Find(value int) bool {
+	for dl.head != nil {
+		if dl.head.Data == value {
+			return true
+		}
+		dl.head = dl.head.next
+	}
+	return false
+}
+
 func (dl *dlinkedList) Delete(value int) {
 	if dl.head == nil {
 		println("its empty")
