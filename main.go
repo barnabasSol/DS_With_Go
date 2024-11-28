@@ -1,19 +1,15 @@
 package main
 
-import "github.com/barnabasSol/DS/hashtable"
+import (
+	"github.com/barnabasSol/DS/trie"
+)
 
 func main() {
-	ht := hashtable.Init()
-	list := []string{
-		"ERIC",
-		"KENNY",
-		"KYLE",
-		"STAN",
-		"RANDY",
-		"BUTTERS",
-	}
-	for _, name := range list {
-		ht.Insert(name)
-	}
-	println(ht.Search("BUTTERS"))
+	trie := trie.New()
+	trie.Insert("barney")
+	trie.Insert("ryan")
+	trie.Insert("gosling")
+	trie.Insert("drive")
+	println(trie.Search(""))
+
 }
