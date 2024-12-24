@@ -6,18 +6,17 @@ func BinarySearch(nums []int, target int) int {
 }
 
 func binary_search(nums []int, target, l, r int) int {
-	leng := len(nums)
-	m := (l + r) / 2
 	if l > r {
 		return -1
 	}
+	m := (r + l) / 2
 	if nums[m] == target {
 		return m
 	} else {
 		if nums[m] < target {
-			return binary_search(nums, target, m+1, leng-1)
+			return binary_search(nums, target, m+1, r)
 		} else {
-			return binary_search(nums, target, m-1, m-1)
+			return binary_search(nums, target, l, m-1)
 		}
 	}
 }
