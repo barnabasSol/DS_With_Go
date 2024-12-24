@@ -1,15 +1,14 @@
 package main
 
 import (
-	"github.com/barnabasSol/DS/trie"
+	"fmt"
+
+	binarysearch "github.com/barnabasSol/DS/binary_search"
 )
 
 func main() {
-	trie := trie.New()
-	trie.Insert("barney")
-	trie.Insert("ryan")
-	trie.Insert("gosling")
-	trie.Insert("drive")
-	println(trie.Search(""))
+	randomNumbers := []int{3, 7, 12, 25, 34, 45, 56, 67, 78, 89, 100}
+	result := binarysearch.BinarySearch(randomNumbers, 25)
+	fmt.Println(result)
 
 }
